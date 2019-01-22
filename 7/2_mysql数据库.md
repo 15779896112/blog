@@ -4,7 +4,7 @@
 
 ### 1.1 子查询
 
-- 子查询嵌入到其他查询语句中查询语句，子查询只能出现在from，where中
+- 子查询嵌入到其他查询语句中查询语句，子查询只能出现在from，where,having中
 - 子查询不要用select *,exists除外
 
 ~~~
@@ -231,11 +231,16 @@ select * from zzl_student where sno = monitor and class='95031';
 - 修改密码
 
   ~~~
-  修改当前登录用户
+  #修改当前登录用户  mysql5.7之前的版本
   set password = password('123456');
   			
   一般管理员可以修改任意用户密码
   set password for 'db'@'localhost' = password('2333');
+  
+  #mysql5.7版修改密码
+  use mysql
+  update user set authentication_string=password('234') where user='root'
+  flush privileges 
   ~~~
 
 - 刷新
@@ -250,7 +255,7 @@ select * from zzl_student where sno = monitor and class='95031';
    grant 权限  on 数据库.表  to '用户名'@'服务器地址'
     grant all on *.* to 'dd'@'localhost'
   	 *.* 所有数据库的所有表
-  	 all 代表所有权限  
+  		 all 代表所有权限  
   	 权限包括：select、update、delete、alter、insert
   ~~~
 
@@ -279,7 +284,7 @@ select * from zzl_student where sno = monitor and class='95031';
 ### 3.3 不建立索引
 
 - 频繁更新的字段不要建立索引
-- 没出现在where、having，不要建立索引
+- 没出现在where、having，order by不要建立索引
 - 数据量少的表没有必要建立索引
 - 唯一性比较差的字段不要建立索引
 
@@ -307,6 +312,13 @@ create  unique index 索引名 on 表名(字段 asc/desc) 默认asc升序
   - a
   - a,b
   - a,b,c
+
+~~~
+create index index_sname_email_sex on student(sname desc,email,sex)
+select sname,sbirthday from student where sname='xxx' and email like 'xxx'
+~~~
+
+
 
 #### 全文索引（了解）
 
