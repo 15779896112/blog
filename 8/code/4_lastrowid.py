@@ -14,21 +14,21 @@ conn = pymysql.Connect(host='localhost',
 cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)
 
 # 3.执行sql语句
-sno = input("请输入学生的姓名：")
-# 字符串参数两边需要添加单引号
-sql = "select sno, sname, ssex from  student where sname like '{}%'".format(sno)
-print(sql)
+name = input("请输入帐号名")
+
+sql = "insert into account(name) values('{}')".format(name)
+# print(sql)
+# exit()
 # 返回受影响的行数
 try:
+    # pymysql自动开启事物，关闭了自动提交功能
     rows = cursor.execute(sql)
-    if rows > 0:
-        # print(rows)
-        # 4.读取结果集
-        # data = cursor.fetchone()   # 一条记录
-        # data = cursor.fetchmany(5)  # 多条记录，参数是记录个数
-        data = cursor.fetchall()  # 获取所有记录
-        print(data)
-        # print(cursor._executed)  # 获取所执行的sql语句
+    if rows > 0:  # 插入成功
+        conn.commit()   # 提交
+        print(cursor.lastrowid)  #获取自赠主键
+    else:
+        conn.rollback()  # 回滚
+
 except Exception as e:
     print(e)
 finally:
