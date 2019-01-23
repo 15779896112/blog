@@ -927,222 +927,247 @@
     <table id="235" parent="7" name="grade"/>
     <table id="236" parent="7" name="old_student"/>
     <table id="237" parent="7" name="student"/>
-    <column id="238" parent="232" name="aid">
+    <table id="238" parent="7" name="user"/>
+    <column id="239" parent="232" name="aid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="232" name="name">
+    <column id="240" parent="232" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="240" parent="232" name="money">
+    <column id="241" parent="232" name="money">
       <Position>3</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="241" parent="232" name="PRIMARY">
+    <key id="242" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>aid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="242" parent="233" name="code">
+    <column id="243" parent="233" name="code">
       <Position>1</Position>
       <DataType>char(6)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="233" name="name">
+    <column id="244" parent="233" name="name">
       <Position>2</Position>
       <DataType>varchar(32)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="233" name="pid">
+    <column id="245" parent="233" name="pid">
       <Position>3</Position>
       <DataType>char(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="245" parent="233" name="PRIMARY">
+    <key id="246" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>code</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="246" parent="234" name="cno">
+    <column id="247" parent="234" name="cno">
       <Position>1</Position>
       <DataType>char(5)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="234" name="cname">
+    <column id="248" parent="234" name="cname">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="234" name="degree">
+    <column id="249" parent="234" name="degree">
       <Position>3</Position>
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="249" parent="234" name="cno">
+    <index id="250" parent="234" name="cno">
       <ColNames>cno</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="250" parent="234" name="PRIMARY">
+    <key id="251" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>cno</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="251" parent="234" name="cno">
+    <key id="252" parent="234" name="cno">
       <ColNames>cno</ColNames>
       <UnderlyingIndexName>cno</UnderlyingIndexName>
     </key>
-    <column id="252" parent="235" name="sno">
+    <column id="253" parent="235" name="sno">
       <Position>1</Position>
       <DataType>char(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="235" name="cno">
+    <column id="254" parent="235" name="cno">
       <Position>2</Position>
       <DataType>char(6)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="235" name="score">
+    <column id="255" parent="235" name="score">
       <Position>3</Position>
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="255" parent="235" name="PRIMARY">
+    <key id="256" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>sno
 cno</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="256" parent="236" name="sno">
+    <column id="257" parent="236" name="sno">
       <Position>1</Position>
       <DataType>char(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="236" name="sname">
+    <column id="258" parent="236" name="sname">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="236" name="ssex">
+    <column id="259" parent="236" name="ssex">
       <Position>3</Position>
       <DataType>enum(&apos;男&apos;, &apos;女&apos;)|0e</DataType>
       <DefaultExpression>&apos;男&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="236" name="sbirthday">
+    <column id="260" parent="236" name="sbirthday">
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="236" name="sclass">
+    <column id="261" parent="236" name="sclass">
       <Position>5</Position>
       <DataType>char(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="236" name="sid">
+    <column id="262" parent="236" name="sid">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="236" name="hobby">
+    <column id="263" parent="236" name="hobby">
       <Position>7</Position>
       <DataType>set(&apos;看电影&apos;, &apos;玩游戏&apos;, &apos;敲代码&apos;, &apos;烫头&apos;)|0e</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="263" parent="236" name="sno">
+    <index id="264" parent="236" name="sno">
       <ColNames>sno</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="264" parent="236" name="PRIMARY">
+    <key id="265" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>sid</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="265" parent="236" name="sno">
+    <key id="266" parent="236" name="sno">
       <ColNames>sno</ColNames>
       <UnderlyingIndexName>sno</UnderlyingIndexName>
     </key>
-    <column id="266" parent="237" name="sno">
+    <column id="267" parent="237" name="sno">
       <Position>1</Position>
       <DataType>char(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="237" name="sname">
+    <column id="268" parent="237" name="sname">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="237" name="ssex">
+    <column id="269" parent="237" name="ssex">
       <Position>3</Position>
       <DataType>enum(&apos;男&apos;, &apos;女&apos;)|0e</DataType>
       <DefaultExpression>&apos;男&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="237" name="sbirthday">
+    <column id="270" parent="237" name="sbirthday">
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="270" parent="237" name="sclass">
+    <column id="271" parent="237" name="sclass">
       <Position>5</Position>
       <DataType>char(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="271" parent="237" name="hobby">
+    <column id="272" parent="237" name="hobby">
       <Position>6</Position>
       <DataType>set(&apos;看电影&apos;, &apos;玩游戏&apos;, &apos;敲代码&apos;, &apos;烫头&apos;)|0e</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="272" parent="237" name="sno">
+    <index id="273" parent="237" name="sno">
       <ColNames>sno</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="273" parent="237" name="index_unique_sname">
+    <index id="274" parent="237" name="index_unique_sname">
       <ColNames>sname</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="274" parent="237" name="index_sname">
+    <index id="275" parent="237" name="index_sname">
       <ColNames>sname</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="275" parent="237" name="index_sclass">
+    <index id="276" parent="237" name="index_sclass">
       <ColNames>sclass</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="276" parent="237" name="PRIMARY">
+    <key id="277" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>sno</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="277" parent="237" name="sno">
+    <key id="278" parent="237" name="sno">
       <ColNames>sno</ColNames>
       <UnderlyingIndexName>sno</UnderlyingIndexName>
     </key>
-    <key id="278" parent="237" name="index_unique_sname">
+    <key id="279" parent="237" name="index_unique_sname">
       <ColNames>sname</ColNames>
       <UnderlyingIndexName>index_unique_sname</UnderlyingIndexName>
+    </key>
+    <column id="280" parent="238" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="281" parent="238" name="name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="282" parent="238" name="password">
+      <Position>3</Position>
+      <DataType>char(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="283" parent="238" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
     </key>
   </database-model>
 </dataSource>
