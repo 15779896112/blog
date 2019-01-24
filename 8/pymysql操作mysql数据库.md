@@ -1,4 +1,4 @@
-#pymysql操作mysql数据库
+# pymysql操作mysql数据库
 
 ## 一、pymysql操作mysql数据库
 
@@ -128,6 +128,8 @@ except Exception as e:
 
   ~~~
   db.where('username="admin"').table('blog_user').field('username,password').select()
+  # select usenrame,password from blog_user where username='admin'
+  # sql = "SELECT {fields} FROM {table} {where} {groupby} {having} {orderby} {limit}".format()
   ~~~
 
 ### 2.2 连贯操作
