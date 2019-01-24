@@ -2,13 +2,29 @@
 
 连接 Redis
 
-**import **redis
+~~~
+import redis
+r = redis.StrictRedis("localhost",6379,password='123456')
+~~~
 
-r = redis.StrictRedis(**"localhost"**,6379,password=**'123456'**)
+操作redis
+
+~~~
+# 方式1 每条命令都会读写服务器
+r.set('name','tom')
+r.get('name')
+
+# 方式2，缓存多条命令，一起执行，比第一种方式效率更高
+pipe = r.pipeline()
+pipe.set('name','hello')
+pipe.set('sex','m')
+pipe.get('name')
+pipe.execute()
+~~~
 
 
 
-## 一 STRING 字符串的操作
+## 一、 STRING 字符串的操作
 
 #### 1. r.set h设置值
 
@@ -138,7 +154,7 @@ r.type(name)
 
 
 
-## 二  Hash 操作
+## 二、Hash 操作
 
 redis中的Hash 在内存中类似于一个name对应一个dic来存储
 
@@ -264,7 +280,7 @@ hincrbyfloat(name, key, amount=1.0)
 
 #####  
 
-## 三  List 操作
+## 三、List 操作
 
 ##### redis中的List在内存中按照一个name对应一个List来存储 
 
@@ -446,7 +462,7 @@ while True:
 
 
 
-## 四 Set 操作
+## 四、Set 操作
 
 Set集合就是不允许重复的列表
 
@@ -575,7 +591,7 @@ r.sunion("set_name","set_name1","set_name2")
 
 
 
-## 五 有序集合 zset
+## 五、有序集合 zset
 
 有序集合：
 
