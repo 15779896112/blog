@@ -21,7 +21,7 @@ sql = "insert into student(sno,sname,sclass) values('{}','{}','{}')".format(sno,
 # exit()
 # 返回受影响的行数
 try:
-    # pymysql自动开启事物，关闭了自动提交功能
+    # pymysql自动开启事务，关闭了自动提交功能
     rows = cursor.execute(sql)
     if rows > 0:  # 插入成功
         conn.commit()   # 提交
