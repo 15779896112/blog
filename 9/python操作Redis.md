@@ -1,13 +1,19 @@
 ## Python操作Redis
 
-连接 Redis
+- 安装redis扩展
+
+~~~
+sudo apt install redis -y
+~~~
+
+- 连接 Redis
 
 ~~~
 import redis
 r = redis.StrictRedis("localhost",6379,password='123456')
 ~~~
 
-操作redis
+- 操作redis
 
 ~~~
 # 方式1 每条命令都会读写服务器
