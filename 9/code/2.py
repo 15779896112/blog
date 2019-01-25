@@ -11,7 +11,7 @@ r = redis.StrictRedis(host='localhost',password='123')
 
 # 1.到redis中获取数据
 # 假定用户名不允许重复
-if r.exists("user:"+name):
+if r.exists("user:"+name):  # redis中存在
     print("数据在reids")
     passwd = r.hget("user:"+name,'password').decode('utf8')
     print(passwd)
