@@ -340,7 +340,7 @@ Redis的Set是string类型的无序集合，元素具有唯一性 不重复。�
 - 其它操作
 
   ~~~
-  spop   key [count]   #移除集合中随机的count个元素,并返回
+  spop   key    #移除集合中随机的1个元素,并返回
   srem  key  member1  [member2]  #移除集合中 一个或者 多个 成员
   sismember  key  member   #判断元素是否在集合中  存在返回1  不在返回0
   ~~~

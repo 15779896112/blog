@@ -79,7 +79,7 @@ mongod
 sudo service mongod start | stop | restart
 ~~~
 
-###(2) 进入 MongoDB数据库
+### (2) 进入 MongoDB数据库
 
 ~~~
 > mongo
