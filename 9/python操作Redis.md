@@ -3,7 +3,7 @@
 - 安装redis扩展
 
 ~~~
-sudo apt install redis -y
+pip install redis 
 ~~~
 
 - 连接 Redis

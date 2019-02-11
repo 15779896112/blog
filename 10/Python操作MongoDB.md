@@ -16,7 +16,7 @@ from pymongo import MongoClient
 ~~~
 MongoDB端口号:27017
 连接MongoDB我们需要使用PyMongo库里面的MongoClient，一般来说传入MongoDB的IP及端口即可，第一个参数为地址host，第二个参数为端口port，端口如果不传默认是27017。
-con= MongoClient("localhost")
+conn= MongoClient("localhost")
 ~~~
 
 ## 三 选择数据库
@@ -90,7 +90,7 @@ for obj in res:
     print(obj)
 ~~~
 
-####(4)id查询
+#### (4)id查询
 
 ~~~
 from bson.objectid import ObjectId* #用于ID查询
