@@ -208,9 +208,9 @@ marquee标签的引入，学习标签应该：
     ~~~
     本机绝对路径：file:///C:/python/web/1/ym.jpg
     网络绝对路径：https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=32ceb0ef04d79123f4ed9c26cc5d32e7/7c1ed21b0ef41bd55520081359da81cb38db3de2.jpg
-    网站绝对路径（了解）：
+    网站绝对路径（了解）：  /代表网站根目录
 
-    相对路径：相对于html文档所在目录
+    相对路径：相对于html文档所在目录  ../上级目录 ./当前目录  ./3/index.html    ../1.html
     ~~~
 
 -   src 图片来源，可以是相对路径也可以是绝对路径
@@ -234,7 +234,7 @@ marquee标签的引入，学习标签应该：
     -   src  视频来源，写法同img的src
     -   controls  控制面板
     -   loop   循环播放
-    -   autoplay  z自动播放
+    -   autoplay  自动播放
     -   width/height    宽高，只设置一个
 
 -   音频
