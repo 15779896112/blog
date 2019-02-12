@@ -92,6 +92,7 @@ Content-Type，内容类型，一般是指网页中存在的Content-Type，用�
 | ---------- | ------------------------ |
 | .html      | text/html                |
 | .js        | application/x-javascript |
+| .css       | text/css                 |
 | .asp       | text/asp                 |
 | .txt       | text/plain               |
 
