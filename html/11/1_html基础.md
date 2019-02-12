@@ -288,42 +288,61 @@ marquee标签的引入，学习标签应该：
 
 - input框
 
-    -   公有属性：type、name、value、readonly、disabled、size
-        -   type 类型：单行文本框（text）、密码框（password）、复选框（textbox）、单选框（radio）、文件上传（file）、按钮（button）、重置按钮（reset）
-        -   name：  名称，要提交，必须设置name
-        -   value    默认值
-        -   readonly   只读
-        -   disabled  不可用
-        -   size
-    -   单行文本框
-        -   type： text
-        -   placeholder：占位符，一般用于提示用户，当用户输入时，会自动消失
-        -   maxlength： 最大字符数
-    -   提交按钮
-        -   type：submit
-        -   value：提交按钮的标题
-    -   重置按钮
-        -   type：reset
-    -   密码框
-        -   type：password
-    -   单选框
-        -   type：radio
-        -   checked：是否选中
-        -   value： 一般用0或1表示，必须设置，否则服务器无法区别选中是哪一个
-    -   复选框
-        -   type：checkbox
-        -   checked: 是否选中
-    -   文件上传
-        -   type：file
-    -   隐藏按钮
-        -   type：hidden
-        -   name和value值必须设置
-    -   button  一般配合js代码使用
+    - 公有属性：type、name、value、readonly、disabled、size
+      -   type 类型：单行文本框（text）、密码框（password）、复选框（checkbox）、单选框（radio）、文件上传（file）、按钮（button）、重置按钮（reset）、提交（submit)
+      -   name：  名称，要提交，必须设置name
+      -   value    默认值
+      -   readonly   只读
+      -   disabled  不可用
+      -   size
+
+    - 单行文本框
+      -   type： text
+      -   placeholder：占位符，一般用于提示用户，当用户输入时，会自动消失
+      -   maxlength： 最大字符数
+
+    - 提交按钮
+      -   type：submit
+      -   value：提交按钮的标题
+
+    - 重置按钮
+      -   type：reset
+
+    - 密码框
+      -   type：password
+
+    - 单选框
+
+      一般用于多选一，name相同是一组，一组中只能选一个
+
+      -   type：radio
+      -   checked：是否选中
+      -   value： 一般用0或1表示，必须设置，否则服务器无法区别选中是哪一个
+
+    - 复选框
+
+      一般name值相同
+
+      -   type：checkbox
+      -   value：必须设置
+      -   checked: 是否选中
+
+    - 文件上传
+      -   type：file
+
+    - 隐藏按钮
+
+      一般用于提交无需用户输入的数据
+
+      -   type：hidden
+      -   name和value值必须设置
+
+    - button  一般配合js代码使用
 
 - 下拉框（select）
 
     -   name 必须设置
-    -   size：显示的行数
+    -   size：显示的行数，如果设置这个属性，下拉框会变成列表框
     -   multiple：是否可以选择多行
     -   下拉框选项（option）
         -   selected：是否选中
@@ -431,7 +450,7 @@ marquee标签的引入，学习标签应该：
 
 
 作业：
-1）仿作大连民心网：http://www.mxwz.com/comp/jb_step2.html?tsly=pc&sqfl=&m=&openid=&id=104
+1）仿作大连民心网：<http://www.mxw.gov.cn/comp/jb_step2.html?tsly=pc&sqfl=1#pos_2&m=&openid=&id=5> 
 
 2）编写表格
 
