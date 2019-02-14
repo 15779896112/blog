@@ -11,7 +11,7 @@ def application(environ,start_response):
     # for key in environ:
     #     print(key,'-----',environ[key])
     # print(environ['PATH_INFO'])
-    html = "<html><head><meta charset='utf-8'></head><body>你好</body></html>"
+    html = "<html><head><meta charset='utf-8'></head><body>404 not found</body></html>"
 
     # 路由，将用户的请求转化为对应的处理
     path = environ.get('PATH_INFO','/')
