@@ -28,7 +28,10 @@
 - 宽高
 
   - width/height仅仅针对非行内元素
+
   - min-width max-width 用于响应式布局
+
+    
 
 ## 6. 字体
 
@@ -106,7 +109,7 @@ font简写(style || weight [size family]) 顺序不能错，但属性可以不�
   li{list-style: none;}
   ```
 
-## 10. 布局
+## 10. 布局(****)
 
 - float(left,right,none)  漂浮，半脱离文档流 块里面的文字不会被覆盖，**重点掌握**
 
