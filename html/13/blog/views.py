@@ -147,3 +147,36 @@ def studentList(request):
     print(template)
     request.start_response('200 ok', [('Content-Type', 'text/html')])
     return [template.render(students=data).encode('utf-8')]
+
+def register(request):
+    print('register')
+    html = b''
+    with open('templates/register.html' ,'rb') as fp:
+        html = fp.read()
+    request.start_response('200 ok', [('Content-Type', 'text/html')])
+    return [html]
+
+def loadStatic(request):
+    path = request.path.strip('/')
+    # print(path)
+
+    import os
+    ext = os.path.splitext(path)[1].strip('.')
+    print(ext)
+    if os.path.exists(path):
+        with open(path,'rb') as fp:
+            content = fp.read()
+        if ext == 'css':
+            request.start_response('200 ok', [('Content-Type', 'text/css')])
+        elif ext == 'js':
+            request.start_response('200 ok', [('Content-Type', 'application/x-javascript')])
+        elif ext == 'png':
+            request.start_response('200 ok', [('Content-Type', 'image/png')])
+        elif ext in ['jpeg','jpg']:
+            request.start_response('200 ok', [('Content-Type', 'image/jpeg')])
+
+    else:
+        content = b"file not found"
+        request.start_response('200 ok', [('Content-Type', 'text/html')])
+
+    return [content]
