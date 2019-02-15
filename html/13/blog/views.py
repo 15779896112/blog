@@ -180,3 +180,10 @@ def loadStatic(request):
         request.start_response('200 ok', [('Content-Type', 'text/html')])
 
     return [content]
+
+def yzm(request):
+    from VerifyCode import VerifyCode
+    vc = VerifyCode()
+    data = vc.generate()
+    request.start_response('200 ok', [('Content-Type', 'image/png')])
+    return [data]
