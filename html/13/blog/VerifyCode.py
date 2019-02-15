@@ -1,5 +1,6 @@
 import hashlib
 from datetime import datetime
+from io import BytesIO
 from random import randint
 from settings import *
 from PIL import ImageFont,Image,ImageDraw
@@ -36,14 +37,18 @@ class VerifyCode:
         self.__drawLine()
 
         # 7 保存图片
-        im.save('vc.jpg')
-
+        # im.save('vc.jpg')
+        buf = BytesIO()
+        im.save(buf,'png')
+        res = buf.getvalue()
+        buf.close()
+        return res
     def __drawLine(self):
         """
         画干扰线
         :return:
         """
-        for i in range(LINENUM):
+        for i in range(5):
             start = (randint(1,self.width-1),randint(1,self.height-1))
             end = (randint(1,self.width-1),randint(1,self.height-1))
             self.pen.line([start,end],fill=self.randColor(50,150),width=1)
