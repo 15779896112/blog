@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东</title>
+	<style>
+		/*公共部分*/
+		*{margin: 0px;padding: 0px;}
+		a{text-decoration: none;}
+		 .clear:after{
+				display:block;
+				content:'';
+				zoom:1;
+				clear:both;
+		}
+
+		/*导航栏*/
+		header .top{height: 30px;background: #e3e4e5;font-size: 12px;}
+		header .top .left{float:left;margin-left:245px;line-height: 30px;}
+		header .top .right{float:right;list-style: none;}
+		header .top .right li {float :left;margin-top: 7px;}
+		header .top .right .space{width:1px;height: 10px;background: #cccccc;margin-left: 10px;margin-right: 10px;margin-top:11px;}
+
+
+		/*搜索栏*/
+		header .middle{height: 100px;background: yellow;}
+
+
+		/*菜单栏*/
+		header .bottom{height: 40px;background: blue}
+	</style>
+</head>
+<body>
+	<header>
+		<!-- 导航栏 -->
+		<div class='top  clear'>
+			<div class='left'>
+				<img src="bj.jpg" alt="">
+				<span>北京</span>
+			</div>
+			<ul class="right">
+				<li>你好，请先登录</li>
+				<li>免费注册</li>
+				<li class='space'></li>
+				<li><a href="">我的订单</a></li>
+			</ul>
+		</div>
+		<!-- 搜索栏 -->
+		<div class='middle'></div>
+
+		<!-- 菜单栏 -->
+		<div class='bottom'></div>
+	</header>
+</body>
+</html>
